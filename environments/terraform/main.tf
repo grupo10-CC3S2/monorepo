@@ -1,12 +1,12 @@
 module "network" {
-  source = "./network_module"
+  source = "../../modules/terraform/network_module"
 
   name = "network-1"
   port = 8080
 }
 
 module "compute" {
-  source = "./compute_module"
+  source = "../../modules/terraform/compute_module"
 
   instance_count = 4
   name           = "server-1"
@@ -16,7 +16,7 @@ module "compute" {
 }
 
 module "db" {
-  source = "./storage_module"
+  source = "../../modules/terraform/storage_module"
 
   name         = "db-1"
   server_name  = module.compute.server_name_out
