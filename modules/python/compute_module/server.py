@@ -1,4 +1,4 @@
-class ServerFatoryModule:
+class ServerFactoryModule:
     def __init__(self, name, network, instance_count=1):
         self.name = name
         self.network = network
