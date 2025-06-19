@@ -8,5 +8,11 @@ variable "network_name" {
 }
 
 variable "instance_count" {
-  type = number
+  type    = number
+  default = 1
+}
+
+variable "region" {
+  type    = string
+  default = "us-east"
 }

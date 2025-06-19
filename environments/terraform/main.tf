@@ -9,7 +9,7 @@ module "compute" {
   source = "../../modules/terraform/compute_module"
 
   instance_count = 4
-  name           = "server-1"
+  name           = "server"
   network_name   = module.network.network_name_out
 
   depends_on = [module.network]
