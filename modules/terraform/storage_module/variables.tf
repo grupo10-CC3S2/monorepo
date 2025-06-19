@@ -18,7 +18,7 @@ variable "size" {
 
 variable "backup_enabled" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "region" {
