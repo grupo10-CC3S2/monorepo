@@ -10,3 +10,18 @@ variable "network_name" {
 variable "server_name" {
   type = string
 }
+
+variable "size" {
+  type    = string
+  default = "2 TB"
+}
+
+variable "backup_enabled" {
+  type    = bool
+  default = true
+}
+
+variable "region" {
+  type    = string
+  default = "us-east"
+}
