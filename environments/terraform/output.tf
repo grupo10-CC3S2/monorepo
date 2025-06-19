@@ -3,5 +3,6 @@ output "info_completa" {
   value = {
     network_info = module.network.network_info
     compute_info = module.compute.compute_info
+    storage_info = module.db.storage_info
   }
 }
