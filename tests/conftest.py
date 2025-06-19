@@ -16,7 +16,7 @@ def sample_network_custom():
 
 @pytest.fixture
 def sample_server(sample_network):
-    return ServerFactoryModule("test-server", sample_network)
+    return ServerFactoryModule("test-server", sample_network, 4)
 
 
 @pytest.fixture
