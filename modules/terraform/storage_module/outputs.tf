@@ -8,6 +8,11 @@ output "storage_path" {
   value       = "/db/${var.name}"
 }
 
+output "backup_path" {
+  description = "Path del backup de la db"
+  value       = "./backup/${var.name}"
+}
+
 output "storage_info" {
   description = "Informacion de la db creada"
   value = {
@@ -17,7 +22,7 @@ output "storage_info" {
     size           = var.size
     backup_enabled = var.backup_enabled
     region         = var.region
-    version        = "v0.4.0"
+    version        = "v0.8.0"
   }
   depends_on = [var.network_name, var.server_name]
 }
