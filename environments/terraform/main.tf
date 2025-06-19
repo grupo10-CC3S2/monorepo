@@ -18,9 +18,11 @@ module "compute" {
 module "db" {
   source = "../../modules/terraform/storage_module"
 
-  name         = "db-1"
-  server_name  = module.compute.server_name_out
-  network_name = module.network.network_name_out
+  name           = "db-1"
+  server_name    = module.compute.server_name_out
+  network_name   = module.network.network_name_out
+  size           = "3.5 TB"
+  backup_enabled = true
 
   depends_on = [module.network, module.compute]
 }

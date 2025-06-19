@@ -9,6 +9,6 @@ output "network_info" {
     name    = var.name
     port    = var.port
     region  = var.region
-    version = "v0.4.0"
+    version = "v0.8.0"
   }
 }
