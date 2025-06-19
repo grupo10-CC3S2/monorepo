@@ -1,0 +1,23 @@
+{
+    "name": "tf-devcontainer",
+    "image": "debian:bullseye-slim",
+    "features": {
+        "ghcr.io/devcontainers/features/terraform:1": {},
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {}
+    },
+    "remoteUser": "root",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hashicorp.terraform",
+                "ms-python.python"
+            ],
+            "settings": {
+                "editor.formatOnPaste": true,
+                "editor.formatOnSave": true
+            }
+        }
+    },
+    "postCreateCommand": "apt-get update && apt-get install -y graphviz"
+}
