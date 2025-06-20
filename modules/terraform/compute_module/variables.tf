@@ -10,6 +10,11 @@ variable "network_name" {
 variable "instance_count" {
   type    = number
   default = 1
+
+  validation {
+    condition     = var.instance_count > 0
+    error_message = "El numero de isntancias debe ser positivo"
+  }
 }
 
 variable "region" {
