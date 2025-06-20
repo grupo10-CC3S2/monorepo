@@ -1,5 +1,8 @@
 class ServerFactoryModule:
     def __init__(self, name, network, instance_count=1):
+        if not isinstance(instance_count, int) or instance_count <= 0:
+            raise ValueError("El numero de instancias debe ser positivo")
+
         self.name = name
         self.network = network
         self.server_type = "web"

@@ -11,7 +11,7 @@ output "compute_info" {
       region       = var.region
       network_name = var.network_name
       index_count  = i + 1
-      version      = "v0.8.0"
+      version      = "v1.0.0"
     }
   ]
   depends_on = [var.network_name]
