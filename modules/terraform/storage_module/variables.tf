@@ -1,6 +1,6 @@
 variable "name" {
   type    = string
-  default = "db-1-us-east"
+  default = "db"
 }
 
 variable "network_name" {
