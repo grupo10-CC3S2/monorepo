@@ -23,5 +23,5 @@ def test_build(sample_network):
     resource = result[0]["null_resource"]["test-network"]
     assert "local-exec" in resource["provisioner"]
 
-    expected_command = f"echo 'Creando network {sample_network.name}-us-east con puerto {sample_network.port}'"
+    expected_command = f"echo 'Creando network {sample_network.name} con puerto {sample_network.port} y region us-east'"
     assert resource["provisioner"]["local-exec"]["command"] == expected_command
